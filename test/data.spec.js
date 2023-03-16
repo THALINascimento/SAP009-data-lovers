@@ -26,11 +26,7 @@ const personagensData = [
   {
     name: "Gilderoy Lockhart",
     house: "Ravenclaw",
-
   }
-
-  },
-
 ];
 //calculo
 describe("Teste calcularPorcentagem", () => {
@@ -38,7 +34,10 @@ describe("Teste calcularPorcentagem", () => {
     expect(typeof harryFunçoes).toBe("function");
   });
   it("should calculate percentage", () => {
-    expect(calcPorcentagem(1, 5)).toBe(20);
+    expect(calcPorcentagem(personagensData[i], personagensData.length)).toBe(part/todos);
+    const todos = personagensData.length
+    todos = 100%
+    const part = personagensData[i]
 
   });
 });

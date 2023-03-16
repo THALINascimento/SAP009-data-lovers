@@ -2,6 +2,7 @@
 export function harryFunçoes(nome, listaPersonagensFiltrados) {
   return listaPersonagensFiltrados.filter((harry) => harry.name.includes(nome));
 }
+
 //FILTRO VER TODOS
 export function filtrarCasa(casa, personagens) {
   return personagens.filter((harry) => harry.house === casa);
@@ -34,7 +35,11 @@ export const filtrarPersonagemCasa = (personagens, casa) => {
 };
 //CÁLCULO AGREGADO
 export const calcPorcentagem = (todos, parte) => {
-
-  return ((parte / todos) *100).toFixed(2);
-
+  var todos = filtrarCasa.length;
+  var parte = 0;
+  // loop
+  for (var i = 0; i < filtrarCasa.length; i++) {
+    return ((parte * 100) / todos).toFixed(2) + "%"; // output 1 - 100%
+  }
+  // ((parte / todos) * 100).toFixed(2);
 };
