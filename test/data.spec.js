@@ -33,25 +33,28 @@ const personagensData = [
 ];
 //calculo
 describe("Teste calcularPorcentagem", () => {
-  it("is a function", () => {
+  it("deveria ser uma função", () => {
     expect(typeof harryFunçoes).toBe("function");
   });
+  
+  it("deve calcular a porcentagem", () => {
+    expect(calcPorcentagem(5, 1)).toBe(20);
+
   it("should calculate percentage", () => {
     expect(calcPorcentagem(1, 5)).toBe(20);
-
   });
 });
+
 //filtro ver todos
-describe('searchBar', () => {
+describe('filtro search', () => {
   it('deveria ser uma função', () => {
     expect(typeof harryFunçoes).toBe("function");
   });
   
-  it('deveria retornar "Hermione" para "Hermione"', () => {
-    expect(harryFunçoes(personagensData, "Hermione")).toEqual([personagensData[0]]);
+  it('deveria retornar "Hermione"', () => {
+    expect(harryFunçoes("Hermione", personagensData)).toEqual([personagensData[0]]);
   });
 });
-
 
 // filtro por casa
 describe('filterHouse', () => {
@@ -97,7 +100,7 @@ describe("Teste selectNameAz", () => {
     expect(typeof selecionaNomeAz).toBe("function");
   });
 
-  const HarryPotterAz = [
+  const harryPotterAz = [
     {
       name: "Harry",
       house: "Gryffindor",
@@ -112,7 +115,7 @@ describe("Teste selectNameAz", () => {
     },
   ];
 
-  const listaOrdenada = selecionaNomeAz(HarryPotterAz);
+  const listaOrdenada = selecionaNomeAz(harryPotterAz);
 
   it('should returns `O primeiro nome da ordem de A-Z "Cedrico"`', () => {
     expect(listaOrdenada[0].name).toBe("Cedrico");
@@ -126,7 +129,7 @@ describe("Teste selectNameZa", () => {
     expect(typeof selecionaNomeZa).toBe("function");
   });
 
-  const HarryPotterZa = [
+  const harryPotterZa = [
     {
       name: "Lucio",
       house: "Slytherin",
@@ -138,7 +141,7 @@ describe("Teste selectNameZa", () => {
 
   ];
 
-  const listaOrdenadaZa = selecionaNomeZa(HarryPotterZa);
+  const listaOrdenadaZa = selecionaNomeZa(harryPotterZa);
 
   it('should returns `O primeiro nome da ordem de Z-A "Rony"`', () => {
     expect(listaOrdenadaZa[0].name).toBe("Rony");
@@ -154,7 +157,7 @@ describe("filtraCasa é uma função", () => {
     expect( ).tobe(personagens.house)
   })
 });
-//campo de busca
+// teste campo de busca
 describe("Teste filterFind", () => {
   it("is a function", () => {
     expect(typeof harryFunçoes).toBe("function");

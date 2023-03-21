@@ -35,9 +35,10 @@ export const filtrarPersonagemCasa = (personagens, casa) => {
   })
   return resultadoCasas
 };
-//CÁLCULO AGREGADO
-export const calcPorcentagem = (todos, parte) => {
-  return ((parte/ todos)).toFixed(2);
+ 
+//CÁLCULO AGREGADO - faz o cálculo dos personagens 
+export const calcPorcentagem = (total, fraçao) => {
+  return parseInt((fraçao / total) *100)
 };
 
 

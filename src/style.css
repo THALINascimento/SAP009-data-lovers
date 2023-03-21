@@ -263,7 +263,6 @@ footer {
     margin: 0;
   }
 
-
   .itens {
     margin: 0;
     display: flex;
@@ -271,8 +270,7 @@ footer {
     gap: 10%;
     font-size: 60%;
     text-align: center;
-    cursor: pointer;
-    
+    cursor: pointer;    
   }
 
   .imgLogo {
@@ -305,7 +303,7 @@ footer {
     justify-content: center;
     flex-direction: row;
   }
-
+/* Rodapé*/
   footer {
     color: rgb(253, 253, 250);
     text-align: center;

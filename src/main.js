@@ -13,7 +13,6 @@ import {
 } from "./data.js";
 
 const animationCards = document.querySelector(".animation-cards");
-
 const linkPersonagens = document.getElementById("listaPerso");
 linkPersonagens.addEventListener("click", exibirPersonagens);
 const todosPersonagens = data.characters;
@@ -56,7 +55,7 @@ campoBusca.addEventListener("keyup", function (event) {
     .join("");
 });
 
-//FILTRO A - Z
+//FILTRO A - Z dos personagens
 const buttonAz = document.getElementById("az");
 buttonAz.addEventListener("click", () => {
   const ordenadoAz = selecionaNomeAz(data.characters);
@@ -118,18 +117,12 @@ selecionarPersonagemPorCasa.addEventListener("change", function (event) {
     .join("");
 });
 
+//CÁLCULO AGREGADO
 const printar = document.getElementById("mensagemCalculo");
 selecionarPersonagemPorCasa.addEventListener("change", function (event) {
   const listaNome = filtrarCasa(event.target.value, todosPersonagens);
-  const percentPersonagens = calcPorcentagem(
-    listaNome.length,
-    todosPersonagens.length
-  );
-  printar.innerHTML =
-    percentPersonagens +
-    "%" +
-    " de personagens que estudam em Hogwarts são da casa " +
-    event.target.value;
+  const percentPersonagens = calcPorcentagem (todosPersonagens.length, listaNome.length);
+  printar.innerHTML = percentPersonagens +  "%" + " de personagens que estudam em Hogwarts são da casa " + event.target.value;
   animationCards.innerHTML = listaNome
     .map((element) => {
       return `         
