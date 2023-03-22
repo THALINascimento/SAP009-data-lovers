@@ -1,257 +1,134 @@
-/*reset de todas as configurações iniciais*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   font-size: 100%;
+  
+}
+html {
+  scroll-behavior: smooth;
 }
 
-/*class container, armazena header com nav,ul,img section, input,select,section, p , main,section,footer*/
-body {
-  background-image: url(img/ceunoite.jpeg);
+/* body, */
+/* html { */
+  
+ 
+/* } */
+
+.body{
   font-family: "Harry Potter";
-  font-size: 1.5rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-inline-end: 0; 
+  background-image: url("img/harry\ 1.jpeg");
+  overflow: overlay; /*fazer com que as barras de rolagem apareçam sobre o conteúdo em vez de ocupar espaço.*/
+}
+.img{
+  
+  
+}
+.imgMenu {
+  width: 200vh;
+  height: 110vh;
+  opacity: 0.6;
+  left: -10px;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+.imgLogo {
+  border-radius: 90%;
+  width: 10%;
+  padding: 30px;
+
 }
 
-/*uma div dentro do header para exibição ampla*/
-
-/*nav dentro do header para navegação do campo busca*/
-.menuWeb {
+.logo {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-
-/*personalização individual da lista poderia usar flax box?*/
-
-.itens {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 60%;
-  align-items: center;
-  margin: 5px;
 }
 a {
-  color: #d3a625;
-}
-a:hover {
-  opacity: 0.9;
-  color: #ae0001;
-}
-.imgLogo {
-  width: 90%;
-  margin: auto;
-  margin-top: 70px;
-  padding: 5px;
+  
+  color: yellow;
+  text-decoration: none;
+  text-align: center;
 }
 
-/*campo de imput e select e botões para navegação*/
-.sessaoInput {
-  display: flex;
-  gap: 50px;
-  padding: 60px;
-  justify-content: center;
+H1 {
+   margin-top: -180px; 
+  left: 11px;
+  position: absolute;  
+  color:#daa520;
   align-items: center;
-  font-size: 75%;
+ box-shadow: purple;
 }
 
-#az {
-  text-align: center;
-  border-radius: 10px;
-  background-color: #d3a625;
-  color: #ae0001;
-  padding: 3px;
+hover: h1{
+text-shadow: purple 10px 10px 10px 10px;
 }
 
-#za {
-  text-align: center;
-  border-radius: 10px;
-  background-color: #d3a625;
-  color: #ae0001;
-  padding: 3px;
-}
+#home{ 
+  font-weight: 50;
+  font-size: 100px;
+  }
 
-/*é um input para busca na section class sessaoinput que armazena a navegação de pesqui selec casa e ordenação*/
-#exibir1 {
-  text-align: center;
-  border-radius: 8px;
-  background-color: #d3a625;
-  color: #ae0001;
-  cursor: pointer;
-  justify-content: end;
+.menu4 a{
+  color: red;
+  margin-left: 1200px;
+  padding-top: 50px;
+  
+  
 }
-
-::-webkit-input-placeholder {
-  color: #ae0001;
-}
-
-.select {
-  color: #ae0001;
-  border-radius: 10px;
-  cursor: pointer;
-  background-color: #d3a625;
-  margin: 5px;
-}
-
-/* section que armazena p vazio para apresentar resultado de tamplat JS de função de claculo*/
-.msgCalc {
-  color: aliceblue;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 75%;
+.menu5 {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 3px;
-}
-
-/*essa classe faz a estilização no tamplete clriado no JS-   é uma div, dentro de uma section unica no main com classe principal*/
-.animation-cards {
-  background: rgb(137, 18, 18);
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
-  font-family: "Courier New", Courier, monospace;
-  text-align: center;
+  flex-direction: row;
+  }
+  
+  #dev{
+    color: rgb(248, 25, 147);
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .dev{
+    color: rgb(248, 25, 147);
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+  }
 }
-
-/* classe criada na função JS para exibição de cards na tela*/
-.cards {
+/*
+item {
+  background-color: aliceblue;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  margin: 10px -50px 10px 20px;
-  background-image: url(img/CartaHogwartas.jpg);
-  background-repeat: no-repeat;
-  width: 18rem;
-  height: 20rem;
-  position: relative;
+  flex-direction: row;
+  color: red;
+  text-decoration: none;
 }
 
-/*id criada na função JS para exibição de cards na tela*/
-#nomePersonagens {
-  word-wrap: break-word;
-  padding-top: 100px;
+.texto {
+  font-family: sans-serif;
+  color: aliceblue;
   font-size: 18px;
-  font-family: "Courier New", Courier, monospace;
-  text-align: center;
-  color: rgb(137, 18, 18);
-  font-weight: bold;
-  line-height: 2rem;
-  width: 16rem;
+  font-weight: 300;
 }
 
-/* classe criada na função JS para exibição de cards na tela*/
-.infoPersonagens {
-  font-family: "Courier New", Courier, monospace;
-  text-align: center;
-  font-size: 15px;
-  margin-top: 10px;
-  margin-right: 50px;
-}
-
-footer {
-  margin-top: 30px;
+.principal {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  flex-direction: column;
-  column-gap: 1px;
+  justify-content: space-around;
+  padding: 10px;
+  width: 100%;
 }
 
-.dev {
-  color: rgb(243, 241, 241);
-  text-align: center;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 20px;
-}
-
-.menuMobile {
-  display: none;
-  flex-direction: column;
-}
-
-@media screen and (max-width: 730px) {
-  /*display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 0.5rem;*/
-  header {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .menuWeb {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin: 0;
-  }
-
-  .itens {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10%;
-    font-size: 60%;
-    text-align: center;
-    cursor: pointer;
-  }
-
-  .imgLogo {
-    max-width: auto;
-    max-height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 20px;
-  }
-
-  .sessaoInput {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .select {
-    color: rgb(247, 246, 246);
-    border-radius: 5%;
-    cursor: pointer;
-    background-color: rgb(69, 69, 69);
-    font-size: smaller;
-  }
-
-  .botao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-  }
-  /* Rodapé*/
-  footer {
-    color: rgb(253, 253, 250);
-    text-align: center;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 5px;
-  }
+/*.cabeçalho {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0 px;
+}*/
+.personagens{
+  background-color: aqua;
 }

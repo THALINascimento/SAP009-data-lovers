@@ -1,38 +1,9 @@
-//FILTRO VER TODOS personagens
-export function harryFunçoes(nome, listaPersonagensFiltrados) {
-  return listaPersonagensFiltrados.filter((harry) => harry.name.includes(nome));
-}
-//FILTRO VER TODOS
-export function filtrarCasa(casa, personagens) {
-  return personagens.filter((harry) => harry.house === casa);
-}
-//ORDENAÇÃO
-export const ordemNome = (a, b) => {
-  if (a.name > b.name) {
-    return 1;
-  }
-  if (a.name < b.name) {
-    return -1;
-  }
+// estas funciones son de ejemplo
+
+export const example = () => {
+  return 'example';
 };
-export const selecionaNomeAz = (personagens) => {
-  return personagens.sort(ordemNome);
-};
-export const selecionaNomeZa = (personagens) => {
-  return personagens.sort(ordemNome).reverse();
-};
-//FILTRO POR CASAS
-export const filtrarPersonagemCasa = (personagens, casa) => {
-  const resultadoCasas = personagens.filter(function (personagem) {
-    if (personagem.house === null) {
-      return false;
-    }
-    const casaFiltro = personagem.house.includes(casa); //determina se a condição pode ser encontrado dentro da string
-    return casaFiltro;
-  });
-  return resultadoCasas;
-};
-//CÁLCULO AGREGADO - faz o cálculo dos personagens
-export const calcPorcentagem = (total, fraçao) => {
-  return parseInt((fraçao / total) * 100);
+
+export const anotherExample = () => {
+  return 'OMG';
 };
