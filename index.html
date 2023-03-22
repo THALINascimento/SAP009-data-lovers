@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harry Potter data-lovers </title>
+  <link href=" https://fonts.cdnfonts.com/css/harry-potter " rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="menuWeb">
+      <ul class="itens">
+        <li><a class="item" id="listaPerso">Personagens </a></li>
+        <li><a class="item" id="listaLivros" href="https://www.hbomax.com/br/pt/harry-potter?countryRedirect=1&utm_id=sa%7c71700000085056423%7c58700007207970536%7cp66001139249&gclid=Cj0KCQjwxveXBhDDARIsAI0Q0x245efopt0KFfdQIZJZjZv_Fs3YZX4yn6ssLbmWykQGbE6iYGeiphgaAqfFEALw_wcB&gclsrc=aw.ds">Filmes</a></li>
+        <li><a class="item" id="listaFeitiços" href="https://www.hogwartslegacy.com/pt-br"> Game </a></li>
+      </ul>
+    </nav>
+    <img class="imgLogo" src="img/harryharry.png.png">
+    <section class="sessaoInput">
+      <input type="text" nome="" id="exibir1" placeholder="Pesquisar">
+      <select class="select" id="selectFiltros">
+        <option value="VerTodos" disabled selected>Personagens</option>
+        <option value="Gryffindor">Gryffindor</option>
+        <option value="Ravenclaw">Ravenclaw</option>
+        <option value="Slytherin">Slytherin</option>
+        <option value="Hufflepuff">Hufflepuff</option>
+      </select>
+      <div class="botao">
+        <button id="az">A-Z</button>
+        <button id="za">Z-A</button>
+      </div>
+    </section>
+    <div class="msgCalc">
+      <p id="mensagemCalculo"> </p>
+    </div>
+  </header>
+  <main class="principal">
+    <div class="animation-cards">
+    </div>
+  </main>
+  <footer class="dev">
+    <p class="dev" id="dev">Projeto desenvolvido durante o Bootcamp pelas alunas: Erika Santos &amp; Thalita Nascimento</p>
+    <p class="dev"> &lt;Laboratória&gt; Data Lovers</p>
+  </footer>
+
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>
