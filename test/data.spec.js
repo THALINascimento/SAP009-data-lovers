@@ -26,126 +26,29 @@ const personagensData = [
   {
     name: "Gilderoy Lockhart",
     house: "Ravenclaw",
-  }
+  },
 ];
 //calculo
 describe("Teste calcularPorcentagem", () => {
-  it("is a function", () => {
+  it("deveria ser uma função", () => {
     expect(typeof harryFunçoes).toBe("function");
   });
-  it("should calculate percentage", () => {
-    expect(calcPorcentagem(personagensData[i], personagensData.length)).toBe(part/todos);
-    const todos = personagensData.length
-    todos = 100%
-    const part = personagensData[i]
-
+  it("deve calcular a porcentagem", () => {
+    expect(calcPorcentagem(5, 1)).toBe(20);
   });
 });
 //filtro ver todos
-describe('searchBar', () => {
-  it('deveria ser uma função', () => {
-    expect(typeof harryFunçoes).toBe("function");
-  });
-  
-  it('deveria retornar "Hermione" para "Hermione"', () => {
-    expect(harryFunçoes(personagensData, "Hermione")).toEqual([personagensData[0]]);
-  });
-});
-
-
-// filtro por casa
-describe('filterHouse', () => {
-  it('deveria ser uma função', () => {
-    expect(typeof filtrarPersonagemCasa).toBe('function');
-  });
-
-  it('deveria retornar "Luna" para "Hufflepuff"', () => {
-    expect(filtrarPersonagemCasa(personagensData, "Hufflepuff")).toEqual([personagensData[2]]);
-
-  });
-});
-//filtro ver todos
-describe("searchBar", () => {
+describe("filtro search", () => {
   it("deveria ser uma função", () => {
     expect(typeof harryFunçoes).toBe("function");
   });
 
-  it('deveria retornar "Hermione" para "Hermione"', () => {
-    expect(harryFunçoes(personagensData, "Hermione")).toEqual([
+  it('deveria retornar "Hermione"', () => {
+    expect(harryFunçoes("Hermione", personagensData)).toEqual([
       personagensData[0],
     ]);
-
   });
 });
-
-
-  it('deveria retornar "Hermione" para "Gryffindor"', () => {
-    expect(filtrarPersonagemCasa(personagensData, "Gryffindor")).toEqual([personagensData[0]]);
-  });
-
-  it('deveria retornar "Draco" para "Slytherin"', () => {
-    expect(filtrarPersonagemCasa(personagensData, "Slytherin")).toEqual([personagensData[1]]);
-  });
-
-  it('deveria retornar "Gilderoy Lockhart" para "Ravenclaw"', () => {
-    expect(filtrarPersonagemCasa(personagensData, "Ravenclaw")).toEqual([personagensData[4]]);
-  });
-});
-// ordenação
-describe("Teste selectNameAz", () => {
-  it("is a function", () => {
-    expect(typeof selecionaNomeAz).toBe("function");
-  });
-
-  const HarryPotterAz = [
-    {
-      name: "Harry",
-      house: "Gryffindor",
-    },
-    {
-      name: "Severo",
-      house: "Slytherin",
-    },
-    {
-      name: "Cedrico",
-      house: "Hufflepuff",
-    },
-  ];
-
-  const listaOrdenada = selecionaNomeAz(HarryPotterAz);
-
-  it('should returns `O primeiro nome da ordem de A-Z "Cedrico"`', () => {
-    expect(listaOrdenada[0].name).toBe("Cedrico");
-  });
-});
-
-describe("Teste selectNameZa", () => {
-  it("is a function", () => {
-    expect(typeof selecionaNomeZa).toBe("function");
-  });
-
-  const HarryPotterZa = [
-    {
-      name: "Lucio",
-      house: "Slytherin",
-    },
-    {
-      name: "Rony",
-      house: "Gryffindor",
-    },
-
-  ];
-
-  const listaOrdenadaZa = selecionaNomeZa(HarryPotterZa);
-
-  it('should returns `O primeiro nome da ordem de Z-A "Rony"`', () => {
-    expect(listaOrdenadaZa[0].name).toBe("Rony");
-  });
-});
-//campo de busca
-describe("Teste filterFind", () => {
-  it("is a function", () => {
-    expect(typeof harryFunçoes).toBe("function");
 
 // filtro por casa
 describe("filterHouse", () => {
@@ -183,7 +86,7 @@ describe("Teste selectNameAz", () => {
     expect(typeof selecionaNomeAz).toBe("function");
   });
 
-  const HarryPotterAz = [
+  const harryPotterAz = [
     {
       name: "Harry",
       house: "Gryffindor",
@@ -198,7 +101,7 @@ describe("Teste selectNameAz", () => {
     },
   ];
 
-  const listaOrdenada = selecionaNomeAz(HarryPotterAz);
+  const listaOrdenada = selecionaNomeAz(harryPotterAz);
 
   it('should returns `O primeiro nome da ordem de A-Z "Cedrico"`', () => {
     expect(listaOrdenada[0].name).toBe("Cedrico");
@@ -210,7 +113,7 @@ describe("Teste selectNameZa", () => {
     expect(typeof selecionaNomeZa).toBe("function");
   });
 
-  const HarryPotterZa = [
+  const harryPotterZa = [
     {
       name: "Lucio",
       house: "Slytherin",
@@ -221,18 +124,17 @@ describe("Teste selectNameZa", () => {
     },
   ];
 
-  const listaOrdenadaZa = selecionaNomeZa(HarryPotterZa);
+  const listaOrdenadaZa = selecionaNomeZa(harryPotterZa);
 
   it('should returns `O primeiro nome da ordem de Z-A "Rony"`', () => {
     expect(listaOrdenadaZa[0].name).toBe("Rony");
   });
 });
-//campo de busca
+// teste campo de busca
 describe("Teste filterFind", () => {
   it("is a function", () => {
     expect(typeof harryFunçoes).toBe("function");
   });
-
 
   it('should returns "[{ Name: "Hermione", House: "Gryffindor"}]" ', () => {
     expect(harryFunçoes("Hermione", personagensData)).toStrictEqual([
@@ -242,8 +144,4 @@ describe("Teste filterFind", () => {
       },
     ]);
   });
-
 });
-
-});
-
