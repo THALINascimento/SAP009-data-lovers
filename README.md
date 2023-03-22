@@ -1,7 +1,7 @@
 # Data Lovers
 
 Este foi o segundo projetoque desenvolvemos na Laboratória. O objetivo deste projeto é converter dados em informações compreensível para o usuário.
-Desenvolvemos uma página contendo informações sobre todos os personagens da saga Harry Potter onde se pode obter informações e curiosidades sobre os personagens. Segundo a Forbes 90% dos dados que existem hoje foram gerados durante os últimos dois anos. A cada dia geramos 2.5 milhões de terabytes de dados, uma cifra sem precedentes. [acesse aqui]()
+Desenvolvemos uma página contendo informações sobre todos os personagens da saga Harry Potter onde se pode obter informações e curiosidades sobre os personagens. Segundo a Forbes 90% dos dados que existem hoje foram gerados durante os últimos dois anos. A cada dia geramos 2.5 milhões de terabytes de dados, uma cifra sem precedentes. [acesse aqui](http://thalinascimento.github.sap009-data-lovers/)
 
 ## Índice
 
