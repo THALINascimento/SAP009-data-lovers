@@ -40,37 +40,14 @@ header {
 .itens {
   list-style: none;
   display: flex;
-
-  margin-left: 160px;
-
   justify-content: center;
   gap: 60%;
   align-items: center;
   margin: 5px;
-
 }
 a {
-
-
-.itens li {
-  letter-spacing: 2px;
- margin-left: 120px;
+  color: #d3a625;
 }
-
-  color:#d3a625;
-
-
-}
-
-
-.imgMenu {
-  width: 90%; 
-  height: 98vh;
-  opacity: 0.6;
-  margin-top: -50px;
-}
-
-
 a:hover {
   opacity: 0.9;
   color: #ae0001;
@@ -83,7 +60,6 @@ a:hover {
 }
 
 /*campo de imput e select e botões para navegação*/
-
 .sessaoInput {
   display: flex;
   gap: 50px;
@@ -96,28 +72,10 @@ a:hover {
 #az {
   text-align: center;
   border-radius: 10px;
-  background-color:#d3a625;
+  background-color: #d3a625;
   color: #ae0001;
   padding: 3px;
 }
-
-
-#listaPerso{
- color: yellow;
-  
-}
-.msgCalc{
-  color: aliceblue;
-  font-family: 'Courier New', Courier, monospace;
-  font-size:25px;
-  margin-left: 290px;
-  
-
-}
-
-#listaPerso:hover {
-  opacity: 0.9;
-  color: rgb(137, 18, 18);
 
 #za {
   text-align: center;
@@ -125,16 +83,11 @@ a:hover {
   background-color: #d3a625;
   color: #ae0001;
   padding: 3px;
-
 }
 
 /*é um input para busca na section class sessaoinput que armazena a navegação de pesqui selec casa e ordenação*/
 #exibir1 {
   text-align: center;
-
-  border-radius: 10px;
-  background-color:  yellow;
-  border:rgb(137, 18, 18);
   border-radius: 8px;
   background-color: #d3a625;
   color: #ae0001;
@@ -142,10 +95,8 @@ a:hover {
   justify-content: end;
 }
 
-
 ::-webkit-input-placeholder {
   color: #ae0001;
-
 }
 
 .select {
@@ -180,10 +131,10 @@ a:hover {
 
 /* classe criada na função JS para exibição de cards na tela*/
 .cards {
-  /*display: flex;
-  /*justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  /*flex-direction: column;*/
+  flex-direction: column;
   margin: 10px -50px 10px 20px;
   background-image: url(img/CartaHogwartas.jpg);
   background-repeat: no-repeat;
@@ -248,12 +199,6 @@ footer {
     gap: 20px;
   }
 
-
-.menuMobile{
-  display: none;
-  flex-direction: column;
-
-
   .menuWeb {
     padding: 20px;
     display: flex;
@@ -270,7 +215,7 @@ footer {
     gap: 10%;
     font-size: 60%;
     text-align: center;
-    cursor: pointer;    
+    cursor: pointer;
   }
 
   .imgLogo {
@@ -296,48 +241,17 @@ footer {
     font-size: smaller;
   }
 
-
   .botao {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
   }
-/* Rodapé*/
+  /* Rodapé*/
   footer {
     color: rgb(253, 253, 250);
     text-align: center;
     font-family: "Courier New", Courier, monospace;
     font-size: 5px;
-
+  }
 }
-  
-
-
-@media screen and (max-width: 730px) {
-    .menuWeb {
-      padding: 1.5rem 4rem;
-    }
-    .item {
-      display: none;
-    }
-    .menuMobile ul {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      padding-bottom: 1rem;
-    }
-    .menuMobile .item{
-      display: block;
-      padding: 1rem 2rem;
-    }
-    #btn-mobile {
-      color:red;
-      border: nome;
-      cursor: pointer;
-      justify-content: end;
-    }
-    .open {
-      display: block;
-    }
-

@@ -1,15 +1,11 @@
 import data from "./data/harrypotter/harry.js";
 import {
-
   harryFunçoes,
-
   selecionaNomeAz,
   selecionaNomeZa,
   calcPorcentagem,
   filtrarCasa,
-
   filtrarPersonagemCasa,
-
 } from "./data.js";
 
 const animationCards = document.querySelector(".animation-cards");
@@ -99,19 +95,20 @@ buttonZa.addEventListener("click", () => {
 const selecionarPersonagemPorCasa = document.getElementById("selectFiltros");
 selecionarPersonagemPorCasa.addEventListener("change", function (event) {
   const valor = event.target.value;
-
-  const listaPersonagensFiltradosPorCasa = filtrarPersonagemCasa(todosPersonagens, valor);
+  const listaPersonagensFiltradosPorCasa = filtrarPersonagemCasa(
+    todosPersonagens,
+    valor
+  );
   animationCards.innerHTML = listaPersonagensFiltradosPorCasa
     .map((element) => {
       `      
-      <div class="cards"> 
-      <p id="nomePersonagens" class="infoPersonagens"><b>${element.name}</b></p>
-      <p class="infoPersonagens"><b>Espécie:</b>${element.species}</p>
-      <p class="infoPersonagens"><b>Livro:</b>${element.books_featured_in}</p>
-      <p class="infoPersonagens"><b>Idade:</b>${element.death}</p>
-      <p class="infoPersonagens"><b>Casa:</b>${element.house}</p>
-    </div>
-
+  <div class="cards"> 
+  <p id="nomePersonagens" class="infoPersonagens"><b>${element.name}</b></p>
+  <p class="infoPersonagens"><b>Espécie:</b>${element.species}</p>
+  <p class="infoPersonagens"><b>Livro:</b>${element.books_featured_in}</p>
+  <p class="infoPersonagens"><b>Idade:</b>${element.death}</p>
+  <p class="infoPersonagens"><b>Casa:</b>${element.house}</p>
+</div>
 `;
     })
     .join("");
@@ -121,21 +118,26 @@ selecionarPersonagemPorCasa.addEventListener("change", function (event) {
 const printar = document.getElementById("mensagemCalculo");
 selecionarPersonagemPorCasa.addEventListener("change", function (event) {
   const listaNome = filtrarCasa(event.target.value, todosPersonagens);
-  const percentPersonagens = calcPorcentagem (todosPersonagens.length, listaNome.length);
-  printar.innerHTML = percentPersonagens +  "%" + " de personagens que estudam em Hogwarts são da casa " + event.target.value;
+  const percentPersonagens = calcPorcentagem(
+    todosPersonagens.length,
+    listaNome.length
+  );
+  printar.innerHTML =
+    percentPersonagens +
+    "%" +
+    " de personagens que estudam em Hogwarts são da casa " +
+    event.target.value;
   animationCards.innerHTML = listaNome
     .map((element) => {
       return `         
-
-    <div class="cards">  
-    <p id="nomePersonagens" class="infoPersonagens"><b>${element.name}</b></p>
-    <p class="infoPersonagens"><b>Espécie:</b>${element.species}</p>
-    <p class="infoPersonagens"><b>Livro:</b>${element.books_featured_in}</p>
-    <p class="infoPersonagens"><b>Idade:</b>${element.death}</p>
-    <p class="infoPersonagens"><b>Casa:</b>${element.house}</p>
-  </div>
-        `;
-
+<div class="cards">  
+<p id="nomePersonagens" class="infoPersonagens"><b>${element.name}</b></p>
+<p class="infoPersonagens"><b>Espécie:</b>${element.species}</p>
+<p class="infoPersonagens"><b>Livro:</b>${element.books_featured_in}</p>
+<p class="infoPersonagens"><b>Idade:</b>${element.death}</p>
+<p class="infoPersonagens"><b>Casa:</b>${element.house}</p>
+</div>
+    `;
     })
     .join("");
   // animationCards.innerHTML = listaNome;
