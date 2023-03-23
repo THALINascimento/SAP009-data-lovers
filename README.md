@@ -92,7 +92,7 @@ Quando o usuário clica na aba personagens, no campo busca, select e nos botões
 
 ## 7 . Autoras
 
-[Erika Soares dos Santos](https://github.com/euerika) & [Thalita Nascimento](https://github.com/THALINascimento)
+[Erika Soares dos Santos]("https://github.com/euerika") & [Thalita Nascimento](https://github.com/THALINascimento)
 
 <div>
     
